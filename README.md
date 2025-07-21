@@ -27,11 +27,11 @@
 This project investigates the effectiveness of LLM-only agents in mobile UI control tasks using the android_world benchmark. We explored how prompting strategies, retry logic, and semantic enrichments impact agent performance across structured environments.
 
 # Notes
-The andriod_world has deleted their datasets, so I have to do two experiment one with normal andone with advanced episodes . Here we focused more on advanced episosde, because in normal episosdes GPT is giving 100% accuracy without any fine tuning techniques.
+# The andriod_world has deleted their datasets, so I have to do two experiment one with normal andone with advanced episodes . Here we focused more on advanced episosde, because in normal episosdes GPT is giving 100% accuracy without any fine tuning techniques.
 
 
 
-##🧪 Experiments Summary for advanced episode
+🧪 Experiments Summary for advanced episode
 
 Experiment	Strategy Used	Step Accuracy	Hallucinations	Retries	Episode Success
 Exp 1	Basic few-shot prompting + retries	61.0%	11	54	0%
