@@ -29,7 +29,7 @@ This project investigates the effectiveness of LLM-only agents in mobile UI cont
 # Notes
 
 🧪 Synthetic Data Generation
-
+The datasets for episodes in andriod_world was deleted thats why I  generated synthetic data
 To simulate real-world mobile UI interactions, we generated 10 advanced synthetic episodes using Google Gemini . These episodes were designed to be:
 
 ❗️ Extremely challenging: including ambiguity, multi-hop reasoning, and hallucination traps.
