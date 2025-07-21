@@ -1,1 +1,210 @@
+[
+    {
+        "id": "ep01_uninstall_slack",
+        "goal": "Uninstall the Slack app",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["Apps", "Battery", "Display", "Storage"]
+                },
+                "action": 'CLICK("Apps")'
+            },
+            {
+                "observation": {
+                    "current_activity": "Apps",
+                    "ui_elements": ["Slack", "Zoom", "Gmail"]
+                },
+                "action": 'CLICK("Slack")'
+            },
+            {
+                "observation": {
+                    "current_activity": "AppInfo",
+                    "ui_elements": ["Uninstall", "Force Stop"]
+                },
+                "action": 'CLICK("Uninstall")'
+            }
+        ]
+    },
+    {
+        "id": "ep02_enable_airplane",
+        "goal": "Turn on Airplane Mode",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "QuickSettings",
+                    "ui_elements": ["Wi-Fi", "Bluetooth", "Airplane mode", "Do Not Disturb"]
+                },
+                "action": 'CLICK("Airplane mode")'
+            }
+        ]
+    },
+    {
+        "id": "ep03_open_gmail",
+        "goal": "Open the Gmail app",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Home",
+                    "ui_elements": ["Gmail", "Camera", "Play Store"]
+                },
+                "action": 'CLICK("Gmail")'
+            }
+        ]
+    },
+    {
+        "id": "ep04_enable_dark_mode",
+        "goal": "Enable Dark Mode",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["Display", "Sound", "Security"]
+                },
+                "action": 'CLICK("Display")'
+            },
+            {
+                "observation": {
+                    "current_activity": "Display",
+                    "ui_elements": ["Brightness", "Dark theme", "Font Size"]
+                },
+                "action": 'CLICK("Dark theme")'
+            }
+        ]
+    },
+    {
+        "id": "ep05_change_language",
+        "goal": "Change system language to Hindi",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["System", "About Phone", "Storage"]
+                },
+                "action": 'CLICK("System")'
+            },
+            {
+                "observation": {
+                    "current_activity": "System",
+                    "ui_elements": ["Languages & input", "Date & time"]
+                },
+                "action": 'CLICK("Languages & input")'
+            },
+            {
+                "observation": {
+                    "current_activity": "Languages & input",
+                    "ui_elements": ["Languages", "Keyboard"]
+                },
+                "action": 'CLICK("Languages")'
+            },
+            {
+                "observation": {
+                    "current_activity": "LanguageList",
+                    "ui_elements": ["English", "Hindi", "Spanish"]
+                },
+                "action": 'CLICK("Hindi")'
+            }
+        ]
+    },
+    {
+        "id": "ep06_disable_notifications",
+        "goal": "Disable Slack notifications",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["Apps", "Sound", "Notifications"]
+                },
+                "action": 'CLICK("Apps")'
+            },
+            {
+                "observation": {
+                    "current_activity": "Apps",
+                    "ui_elements": ["Slack", "Chrome", "WhatsApp"]
+                },
+                "action": 'CLICK("Slack")'
+            },
+            {
+                "observation": {
+                    "current_activity": "AppInfo",
+                    "ui_elements": ["Notifications", "Permissions"]
+                },
+                "action": 'CLICK("Notifications")'
+            },
+            {
+                "observation": {
+                    "current_activity": "NotificationSettings",
+                    "ui_elements": ["Allow notifications", "Sound"]
+                },
+                "action": 'CLICK("Allow notifications")'
+            }
+        ]
+    },
+    {
+        "id": "ep07_check_storage",
+        "goal": "Check available storage space",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["Apps", "Battery", "Storage"]
+                },
+                "action": 'CLICK("Storage")'
+            }
+        ]
+    },
+    {
+        "id": "ep08_turn_on_bluetooth",
+        "goal": "Turn on Bluetooth",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "QuickSettings",
+                    "ui_elements": ["Wi-Fi", "Bluetooth", "Airplane mode"]
+                },
+                "action": 'CLICK("Bluetooth")'
+            }
+        ]
+    },
+    {
+        "id": "ep09_launch_youtube",
+        "goal": "Open the YouTube app",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "AppDrawer",
+                    "ui_elements": ["YouTube", "Gmail", "Drive"]
+                },
+                "action": 'CLICK("YouTube")'
+            }
+        ]
+    },
+    {
+        "id": "ep10_force_stop_camera",
+        "goal": "Force stop the Camera app",
+        "steps": [
+            {
+                "observation": {
+                    "current_activity": "Settings",
+                    "ui_elements": ["Apps", "Security", "Storage"]
+                },
+                "action": 'CLICK("Apps")'
+            },
+            {
+                "observation": {
+                    "current_activity": "Apps",
+                    "ui_elements": ["Camera", "Gallery", "Maps"]
+                },
+                "action": 'CLICK("Camera")'
+            },
+            {
+                "observation": {
+                    "current_activity": "AppInfo",
+                    "ui_elements": ["Uninstall", "Force Stop"]
+                },
+                "action": 'CLICK("Force Stop")'
+            }
+        ]
+    }
+]
 
