@@ -1,1 +1,892 @@
+[
+  {
+    "id": "ep_0011",
+    "goal": "Find a specific email from last month containing an attachment with 'invoice' in its name, download the attachment, and move the email to the 'Finance' folder.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Gmail", "Calendar", "Maps"]
+        },
+        "action": "OPEN(\"Gmail\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Inbox",
+          "ui_elements": ["Search mail", "Compose", "Primary", "Promotions"]
+        },
+        "action": "SEARCH(\"has:attachment after:2025/06/15 before:2025/07/15 filename:invoice\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Search Results",
+          "ui_elements": ["Email from 'Acme Corp' (Subject: Invoice Q2)", "Email from 'Supplier X'", "Back button"]
+        },
+        "action": "CLICK(\"Email from 'Acme Corp' (Subject: Invoice Q2)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email View",
+          "ui_elements": ["Sender: Acme Corp", "Subject: Invoice Q2", "Attachment: invoice_Q2.pdf", "Reply", "Forward", "More options icon (three dots)"]
+        },
+        "action": "CLICK(\"Attachment: invoice_Q2.pdf\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email View",
+          "ui_elements": ["Sender: Acme Corp", "Subject: Invoice Q2", "Attachment: invoice_Q2.pdf", "More options icon (three dots)"]
+        },
+        "action": "CLICK(\"More options icon (three dots)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email Options",
+          "ui_elements": ["Reply", "Forward", "Move to", "Snooze", "Mark as unread"]
+        },
+        "action": "CLICK(\"Move to\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Move To",
+          "ui_elements": ["Inbox", "Sent", "Drafts", "Finance folder", "Personal"]
+        },
+        "action": "CLICK(\"Finance folder\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0012",
+    "goal": "Schedule a video conference call for next Tuesday at 11 AM with 'John Doe' and 'Jane Smith', set a reminder for 15 minutes before, and add a brief description.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Google Calendar", "Clock", "Gmail"]
+        },
+        "action": "OPEN(\"Google Calendar\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar Month View",
+          "ui_elements": ["Today", "Add event button", "Settings"]
+        },
+        "action": "CLICK(\"Add event button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title", "Date", "Time", "Add guests", "Save"]
+        },
+        "action": "TYPE(\"Title: Team Sync\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Date: Jul 15", "Time", "Add guests", "Save"]
+        },
+        "action": "CLICK(\"Date: Jul 15\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar Date Picker",
+          "ui_elements": ["July 2025 calendar", "Next week arrow", "Next Tuesday (Jul 22)"]
+        },
+        "action": "NAVIGATE(\"Next Tuesday (Jul 22)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Date: Jul 22", "Time: 9:00 AM", "Add guests", "Save"]
+        },
+        "action": "CLICK(\"Time: 9:00 AM\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar Time Picker",
+          "ui_elements": ["10:00", "11:00", "12:00"]
+        },
+        "action": "TYPE(\"11:00 AM\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Date: Jul 22", "Time: 11:00 AM", "Add guests", "Add video conferencing", "Save"]
+        },
+        "action": "CLICK(\"Add guests\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar Add Guests",
+          "ui_elements": ["Enter names or emails", "John Doe", "Jane Smith"]
+        },
+        "action": "TYPE(\"John Doe, Jane Smith\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Date: Jul 22", "Time: 11:00 AM", "Guests: John Doe, Jane Smith", "Add video conferencing", "Add notification", "Save"]
+        },
+        "action": "CLICK(\"Add video conferencing\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Video conference added", "Add notification", "Description", "Save"]
+        },
+        "action": "CLICK(\"Add notification\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar Notification Options",
+          "ui_elements": ["30 minutes before", "15 minutes before", "1 hour before", "Custom"]
+        },
+        "action": "CLICK(\"15 minutes before\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Notification: 15 minutes before", "Description", "Save"]
+        },
+        "action": "TYPE(\"Description: Weekly project update.\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Calendar New Event",
+          "ui_elements": ["Title: Team Sync", "Description: Weekly project update.", "Save button"]
+        },
+        "action": "CLICK(\"Save button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0013",
+    "goal": "Order a pizza from a highly-rated local pizza place using a delivery app, customize toppings, and select cash payment.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["DoorDash", "Uber Eats", "Grubhub"]
+        },
+        "action": "OPEN(\"DoorDash\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Home",
+          "ui_elements": ["Search restaurants", "Browse categories", "Promotions"]
+        },
+        "action": "SEARCH(\"Pizza\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Search Results",
+          "ui_elements": ["Sort by", "Filters", "Pizza Palace (4.8 stars)", "Dominos (4.2 stars)"]
+        },
+        "action": "CLICK(\"Sort by\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Sort Options",
+          "ui_elements": ["Recommended", "Rating", "Delivery time", "Price"]
+        },
+        "action": "CLICK(\"Rating\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Search Results",
+          "ui_elements": ["Pizza Palace (4.8 stars)", "The Pizza Joint (4.5 stars)"]
+        },
+        "action": "CLICK(\"Pizza Palace (4.8 stars)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Pizza Palace Menu",
+          "ui_elements": ["Menu categories", "Pepperoni Pizza", "Margherita Pizza"]
+        },
+        "action": "CLICK(\"Pepperoni Pizza\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Customize Item",
+          "ui_elements": ["Extra Cheese checkbox", "Olives checkbox", "Add to Cart button"]
+        },
+        "action": "CLICK(\"Extra Cheese checkbox\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Customize Item",
+          "ui_elements": ["Extra Cheese checkbox (checked)", "Olives checkbox (checked)", "Add to Cart button"]
+        },
+        "action": "CLICK(\"Olives checkbox\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Customize Item",
+          "ui_elements": ["Extra Cheese checkbox (checked)", "Olives checkbox (unchecked)", "Add to Cart button"]
+        },
+        "action": "CLICK(\"Add to Cart button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Cart",
+          "ui_elements": ["Pepperoni Pizza (customized)", "Subtotal", "Checkout button"]
+        },
+        "action": "CLICK(\"Checkout button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Checkout",
+          "ui_elements": ["Delivery address", "Payment method", "Place order button"]
+        },
+        "action": "CLICK(\"Payment method\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Payment Options",
+          "ui_elements": ["Credit/Debit Card", "PayPal", "Cash on delivery"]
+        },
+        "action": "CLICK(\"Cash on delivery\")"
+      },
+      {
+        "observation": {
+          "current_activity": "DoorDash Checkout",
+          "ui_elements": ["Payment method: Cash on delivery", "Place order button"]
+        },
+        "action": "CLICK(\"Place order button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0014",
+    "goal": "Clear browser history for the last hour and block pop-ups for a specific website.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Chrome", "Firefox", "Settings"]
+        },
+        "action": "OPEN(\"Chrome\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Browser",
+          "ui_elements": ["Search bar", "Tabs", "Menu icon (three dots)"]
+        },
+        "action": "CLICK(\"Menu icon (three dots)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Menu",
+          "ui_elements": ["New tab", "History", "Downloads", "Settings"]
+        },
+        "action": "CLICK(\"History\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome History",
+          "ui_elements": ["Search history", "Clear Browse data button", "Recent sites"]
+        },
+        "action": "CLICK(\"Clear Browse data button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Clear Browse Data",
+          "ui_elements": ["Time range dropdown", "Browse history checkbox", "Cookies checkbox", "Clear data button"]
+        },
+        "action": "CLICK(\"Time range dropdown\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Time Range Options",
+          "ui_elements": ["Last hour", "Last 24 hours", "All time"]
+        },
+        "action": "CLICK(\"Last hour\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Clear Browse Data",
+          "ui_elements": ["Time range: Last hour", "Clear data button"]
+        },
+        "action": "CLICK(\"Clear data button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome History",
+          "ui_elements": ["History cleared", "Back button", "Menu icon (three dots)"]
+        },
+        "action": "CLICK(\"Back button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Browser",
+          "ui_elements": ["Search bar", "Tabs", "Menu icon (three dots)"]
+        },
+        "action": "CLICK(\"Menu icon (three dots)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Menu",
+          "ui_elements": ["New tab", "History", "Settings"]
+        },
+        "action": "CLICK(\"Settings\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Settings",
+          "ui_elements": ["Privacy and security", "Site settings", "Accessibility"]
+        },
+        "action": "NAVIGATE(\"Site settings\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Site Settings",
+          "ui_elements": ["Cookies", "Pop-ups and redirects", "Notifications"]
+        },
+        "action": "CLICK(\"Pop-ups and redirects\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Pop-ups and Redirects",
+          "ui_elements": ["Block pop-ups toggle", "Add site exception button"]
+        },
+        "action": "CLICK(\"Add site exception button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Add Site Exception",
+          "ui_elements": ["Site address input", "Add button"]
+        },
+        "action": "TYPE(\"Site address input: malicious-site.com\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Chrome Add Site Exception",
+          "ui_elements": ["Site address: malicious-site.com", "Block button", "Allow button"]
+        },
+        "action": "CLICK(\"Block button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0015",
+    "goal": "Change the default keyboard language to Spanish (Spain) and download a new emoji pack.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Settings", "Messages", "Camera"]
+        },
+        "action": "OPEN(\"Settings\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Settings Main",
+          "ui_elements": ["Network & internet", "Connected devices", "System"]
+        },
+        "action": "NAVIGATE(\"System\")"
+      },
+      {
+        "observation": {
+          "current_activity": "System Settings",
+          "ui_elements": ["Languages & input", "Date & time", "Backup"]
+        },
+        "action": "CLICK(\"Languages & input\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Languages & Input",
+          "ui_elements": ["Languages", "Virtual keyboard", "Physical keyboard"]
+        },
+        "action": "CLICK(\"Virtual keyboard\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Virtual Keyboard",
+          "ui_elements": ["Gboard", "Samsung Keyboard", "Manage keyboards"]
+        },
+        "action": "CLICK(\"Gboard\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Settings",
+          "ui_elements": ["Languages", "Preferences", "Theme", "Emoji, Stickers & GIFs"]
+        },
+        "action": "CLICK(\"Languages\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Languages",
+          "ui_elements": ["English (US)", "Add keyboard button"]
+        },
+        "action": "CLICK(\"Add keyboard button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Add Keyboard",
+          "ui_elements": ["Search languages", "Afrikaans", "Spanish (Spain)"]
+        },
+        "action": "SEARCH(\"Spanish (Spain)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Add Keyboard",
+          "ui_elements": ["Spanish (Spain)", "Spanish (Latin America)"]
+        },
+        "action": "CLICK(\"Spanish (Spain)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Spanish (Spain) Options",
+          "ui_elements": ["QWERTY", "Handwriting", "Done button"]
+        },
+        "action": "CLICK(\"Done button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Languages",
+          "ui_elements": ["English (US)", "Spanish (Spain)", "Back button"]
+        },
+        "action": "CLICK(\"Back button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Settings",
+          "ui_elements": ["Languages", "Emoji, Stickers & GIFs", "Advanced"]
+        },
+        "action": "CLICK(\"Emoji, Stickers & GIFs\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Emoji, Stickers & GIFs",
+          "ui_elements": ["Emoji Browse", "Download new emoji pack button", "Stickers"]
+        },
+        "action": "CLICK(\"Download new emoji pack button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gboard Download Emoji Pack",
+          "ui_elements": ["Emoji pack preview", "Confirm download button"]
+        },
+        "action": "CLICK(\"Confirm download button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0016",
+    "goal": "Set up a new biometric fingerprint for unlocking the device and enable app lock for a specific app (e.g., Photos).",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Settings", "Phone", "Messages"]
+        },
+        "action": "OPEN(\"Settings\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Settings Main",
+          "ui_elements": ["Security & privacy", "Battery", "Display"]
+        },
+        "action": "NAVIGATE(\"Security & privacy\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Security & Privacy",
+          "ui_elements": ["Device unlock", "App lock", "Find My Device"]
+        },
+        "action": "CLICK(\"Device unlock\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Device Unlock",
+          "ui_elements": ["Screen lock (PIN)", "Fingerprint unlock"]
+        },
+        "action": "TYPE(\"Enter current PIN/Pattern\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Device Unlock Options",
+          "ui_elements": ["PIN", "Pattern", "Fingerprint unlock"]
+        },
+        "action": "CLICK(\"Fingerprint unlock\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Fingerprint Management",
+          "ui_elements": ["Add fingerprint button", "Fingerprint 1"]
+        },
+        "action": "CLICK(\"Add fingerprint button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Fingerprint Setup Guide",
+          "ui_elements": ["Place finger on sensor", "Lift and repeat"]
+        },
+        "action": "SWIPE(\"Follow on-screen instructions to register fingerprint\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Fingerprint Setup Complete",
+          "ui_elements": ["Fingerprint added successfully", "Done button"]
+        },
+        "action": "CLICK(\"Done button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Fingerprint Management",
+          "ui_elements": ["Fingerprint 1", "Fingerprint 2", "Back button"]
+        },
+        "action": "CLICK(\"Back button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Security & Privacy",
+          "ui_elements": ["Device unlock", "App lock", "Find My Device"]
+        },
+        "action": "CLICK(\"App lock\")"
+      },
+      {
+        "observation": {
+          "current_activity": "App Lock Authentication",
+          "ui_elements": ["Enter your PIN/Pattern", "Unlock button"]
+        },
+        "action": "TYPE(\"Enter current PIN/Pattern\")"
+      },
+      {
+        "observation": {
+          "current_activity": "App Lock List",
+          "ui_elements": ["Messages (toggle)", "Photos (toggle)", "Gallery (toggle)"]
+        },
+        "action": "ENABLE(\"Photos (toggle)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "App Lock List",
+          "ui_elements": ["Messages (toggle)", "Photos (toggle - enabled)", "Done button"]
+        },
+        "action": "CLICK(\"Done button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0017",
+    "goal": "Create a new note with a checklist, add three items, and then share the note as a PDF.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Google Keep", "Notes", "Reminders"]
+        },
+        "action": "OPEN(\"Google Keep\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep Main",
+          "ui_elements": ["Take a note...", "New list button", "New drawing button"]
+        },
+        "action": "CLICK(\"New list button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title field", "List item 1", "Add list item button"]
+        },
+        "action": "TYPE(\"Title field: Groceries\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title: Groceries", "List item 1 text field", "Add list item button"]
+        },
+        "action": "TYPE(\"List item 1 text field: Milk\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title: Groceries", "Milk (checkbox)", "Add list item button"]
+        },
+        "action": "CLICK(\"Add list item button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title: Groceries", "Milk (checkbox)", "List item 2 text field", "Add list item button"]
+        },
+        "action": "TYPE(\"List item 2 text field: Bread\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title: Groceries", "Milk (checkbox)", "Bread (checkbox)", "Add list item button"]
+        },
+        "action": "CLICK(\"Add list item button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["Title: Groceries", "Milk (checkbox)", "Bread (checkbox)", "List item 3 text field"]
+        },
+        "action": "TYPE(\"List item 3 text field: Eggs\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep New Checklist",
+          "ui_elements": ["More options icon (three dots)", "Done button"]
+        },
+        "action": "CLICK(\"More options icon (three dots)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep Note Options",
+          "ui_elements": ["Delete", "Make a copy", "Send"]
+        },
+        "action": "CLICK(\"Send\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Google Keep Share Options",
+          "ui_elements": ["Send via other apps", "Send as text", "Send as PDF"]
+        },
+        "action": "CLICK(\"Send as PDF\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Android Share Sheet",
+          "ui_elements": ["Gmail", "WhatsApp", "Bluetooth"]
+        },
+        "action": "CLICK(\"Gmail\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Compose",
+          "ui_elements": ["To field", "Subject field", "Attached file: Groceries.pdf"]
+        },
+        "action": "TYPE(\"To field: recipient@example.com\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Compose",
+          "ui_elements": ["To: recipient@example.com", "Subject field", "Send button"]
+        },
+        "action": "CLICK(\"Send button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0018",
+    "goal": "Unsubscribe from a specific newsletter in Gmail and report it as spam.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Gmail", "WhatsApp", "Settings"]
+        },
+        "action": "OPEN(\"Gmail\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Inbox",
+          "ui_elements": ["Search mail", "Compose", "Primary"]
+        },
+        "action": "SEARCH(\"from:newsletter@example.com\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Search Results",
+          "ui_elements": ["Newsletter email (Subject: Weekly Digest)", "Other emails"]
+        },
+        "action": "CLICK(\"Newsletter email (Subject: Weekly Digest)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email View",
+          "ui_elements": ["Sender: newsletter@example.com", "Email content", "Scrollbar"]
+        },
+        "action": "SCROLL(\"down to bottom of email\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email View",
+          "ui_elements": ["Email content (bottom)", "Unsubscribe link", "View in browser"]
+        },
+        "action": "CLICK(\"Unsubscribe link\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Browser (Unsubscribe Page)",
+          "ui_elements": ["Confirm unsubscribe button", "Go back to email"]
+        },
+        "action": "CLICK(\"Confirm unsubscribe button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Browser (Unsubscribe Page)",
+          "ui_elements": ["Unsubscribed successfully message", "Back to email app button"]
+        },
+        "action": "CLICK(\"Back to email app button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Email View",
+          "ui_elements": ["Sender: newsletter@example.com", "Report spam icon", "Archive icon"]
+        },
+        "action": "CLICK(\"Report spam icon\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Gmail Report Spam Confirmation",
+          "ui_elements": ["Report spam and unsubscribe?", "Report only", "Confirm report spam button"]
+        },
+        "action": "CLICK(\"Confirm report spam button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0019",
+    "goal": "Connect to a new Wi-Fi network that requires a password and then forget an old, unused network.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Settings", "Files", "Camera"]
+        },
+        "action": "OPEN(\"Settings\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Settings Main",
+          "ui_elements": ["Network & internet", "Connected devices", "Display"]
+        },
+        "action": "NAVIGATE(\"Network & internet\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Network & Internet",
+          "ui_elements": ["Wi-Fi", "Mobile network", "Hotspot & tethering"]
+        },
+        "action": "CLICK(\"Wi-Fi\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Settings",
+          "ui_elements": ["Wi-Fi toggle (On)", "Old_Home_Network (Connected)", "New_Office_WiFi (Available)"]
+        },
+        "action": "CLICK(\"New_Office_WiFi (Available)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Password Input",
+          "ui_elements": ["Password field", "Connect button", "Cancel button"]
+        },
+        "action": "TYPE(\"Password field: SecurePassword123\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Password Input",
+          "ui_elements": ["Password: *****", "Connect button"]
+        },
+        "action": "CLICK(\"Connect button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Settings",
+          "ui_elements": ["New_Office_WiFi (Connected)", "Old_Home_Network (Saved)", "Add network"]
+        },
+        "action": "CLICK(\"Old_Home_Network (Saved)\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Network Details",
+          "ui_elements": ["Network name: Old_Home_Network", "Forget network button", "Disconnect button"]
+        },
+        "action": "CLICK(\"Forget network button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Wi-Fi Forget Confirmation",
+          "ui_elements": ["Forget Old_Home_Network?", "Cancel", "Forget button"]
+        },
+        "action": "CLICK(\"Forget button\")"
+      }
+    ]
+  },
+  {
+    "id": "ep_0020",
+    "goal": "Record a voice memo, trim the first 5 seconds, and share it via Bluetooth.",
+    "steps": [
+      {
+        "observation": {
+          "current_activity": "Home Screen",
+          "ui_elements": ["Voice Recorder", "Music", "Gallery"]
+        },
+        "action": "OPEN(\"Voice Recorder\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Main",
+          "ui_elements": ["Record button", "Recordings list"]
+        },
+        "action": "CLICK(\"Record button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Recording",
+          "ui_elements": ["Stop button", "Timer: 00:05", "Pause button"]
+        },
+        "action": "TYPE(\"Speak for 10 seconds\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Recording",
+          "ui_elements": ["Stop button", "Timer: 00:10"]
+        },
+        "action": "CLICK(\"Stop button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Playback",
+          "ui_elements": ["Play button", "Edit/Trim icon", "Share icon"]
+        },
+        "action": "CLICK(\"Edit/Trim icon\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Trim",
+          "ui_elements": ["Audio waveform", "Left trim handle", "Right trim handle", "Save button"]
+        },
+        "action": "SWIPE(\"Left trim handle to remove first 5 seconds\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Trim",
+          "ui_elements": ["Trimmed audio waveform", "Save button"]
+        },
+        "action": "CLICK(\"Save button\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Voice Recorder Playback",
+          "ui_elements": ["Play button", "Share icon", "Delete icon"]
+        },
+        "action": "CLICK(\"Share icon\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Android Share Sheet",
+          "ui_elements": ["Gmail", "WhatsApp", "Bluetooth", "Drive"]
+        },
+        "action": "CLICK(\"Bluetooth\")"
+      },
+      {
+        "observation": {
+          "current_activity": "Bluetooth Device Picker",
+          "ui_elements": ["My Headphones", "Car System", "Other devices"]
+        },
+        "action": "CLICK(\"My Headphones\")"
+      }
+    ]
+  }
+]
+
+
+
 
