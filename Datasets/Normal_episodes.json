@@ -1,4 +1,4 @@
-[
+AtDVANCED_EPISODES = [
     {
         "id": "ep01_uninstall_slack",
         "goal": "Uninstall the Slack app",
@@ -207,4 +207,3 @@
         ]
     }
 ]
-
