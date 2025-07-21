@@ -31,7 +31,7 @@ The andriod_world has deleted their datasets, so I have to do two experiment one
 
 
 
-🧪 Experiments Summary for advanced episode
+##🧪 Experiments Summary for advanced episode
 
 Experiment	Strategy Used	Step Accuracy	Hallucinations	Retries	Episode Success
 Exp 1	Basic few-shot prompting + retries	61.0%	11	54	0%
