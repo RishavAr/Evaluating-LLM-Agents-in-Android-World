@@ -27,8 +27,30 @@
 This project investigates the effectiveness of LLM-only agents in mobile UI control tasks using the android_world benchmark. We explored how prompting strategies, retry logic, and semantic enrichments impact agent performance across structured environments.
 
 # Notes
-# The andriod_world has deleted their datasets, so I have to do two experiment one with normal andone with advanced episodes . Here we focused more on advanced episosde, because in normal episosdes GPT is giving 100% accuracy without any fine tuning techniques.
 
+🧪 Synthetic Data Generation
+
+To simulate real-world mobile UI interactions, we generated 10 advanced synthetic episodes using Google Gemini . These episodes were designed to be:
+
+❗️ Extremely challenging: including ambiguity, multi-hop reasoning, and hallucination traps.
+🧠 Rich in reasoning: with natural typos, contradictions, and steps requiring world knowledge.
+📲 Diverse in task type: covering settings configuration, app navigation, text input, and search.
+🔍 Why Gemini?
+We used Gemini  for episode generation instead of OpenAI models for the following reasons:
+
+Gemini is better at generating long, structured outputs with step-by-step task trees.
+It allowed more controllable hallucination injection and goal complexity variation.
+We wanted to avoid model bias by not training and evaluating on the same model family (OpenAI GPT).
+This helps benchmark generalization of agents under LLM-generated scenarios that are different from the inference mo
+
+Agent Model: OpenAI GPT-4o(API)
+
+We used OpenAI GPT-4o to implement and evaluate the LLM-based control agent.
+
+Why GPT-4o?
+🧠 We already had access to GPT-4o via our previous SecureGPT/NIST research projects.
+💸 Claude 3 and Gemini cost constraints made it infeasible to run large-scale inference with them.
+🔁 GPT-4o allowed fast retries, reflection, and CoT loops at scale with manageable latency.
 
 
 🧪 Experiments Summary for advanced episode
