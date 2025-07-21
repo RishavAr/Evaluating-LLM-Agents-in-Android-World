@@ -39,7 +39,7 @@ To simulate real-world mobile UI interactions, we generated 10 advanced syntheti
 
 📲 Diverse in task type: covering settings configuration, app navigation, text input, and search.
 
-🔍 Why Gemini?
+# 🔍 Why Gemini?
 
 We used Gemini  for episode generation instead of OpenAI models for the following reasons:
 
@@ -53,7 +53,7 @@ This helps benchmark generalization of agents under LLM-generated scenarios that
 
 
 
-Agent Model: OpenAI GPT-4o(API)
+# Agent Model: OpenAI GPT-4o(API)
 
 We used OpenAI GPT-4o to implement and evaluate the LLM-based control agent.
 
