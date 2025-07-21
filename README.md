@@ -4,7 +4,7 @@
 
 📁 Repo Structure
 
-'''bash
+```bash
 ├── src/
 │   ├── agent.py          # Code for prompt generation, agent action loop
 │   ├── evaluator.py      # Evaluation logic and retry handling
@@ -18,7 +18,7 @@
 │   ├── plots/            # Accuracy bar charts, heatmaps
 │
 ├── report.md             # This report
-'''
+```
 
 📋 Agent Evaluation Report
 
